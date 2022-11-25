@@ -28,7 +28,7 @@ function PlayState:init()
 end
 
 function PlayState:update(dt)
-    if scrolling then
+    if scrolling == true then
         -- update timer for pipe spawning
         self.timer = self.timer + dt
 
