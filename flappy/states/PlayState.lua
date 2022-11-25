@@ -108,8 +108,10 @@ function PlayState:update(dt)
         if scrolling == true then
             scrolling = false
             sounds['music']:pause()
+            sounds['pause']:play()
         else        
             scrolling=true
+            sounds['pause']:pause()
             sounds['music']:play()
         end
     end
