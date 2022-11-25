@@ -100,22 +100,23 @@ function PlayState:update(dt)
                 score = self.score
             })
             
-          
-            if love.keyboard.wasPressed('p') then
-                if scrolling == true then
-                    scrolling = false
-                    sounds['music']:pause()
-                else
-                    scrolling=true
-                    sounds['music']:play()
-                end
+          end
+        
+        if love.keyboard.wasPressed('p') then
+            if scrolling == true then
+                scrolling = false
+                sounds['music']:pause()
+            else        
+                scrolling=true
+                sounds['music']:play()
             end
+        end
             
                     
             
-        end
     end
 end
+
 
 function PlayState:render()
     for k, pair in pairs(self.pipePairs) do
