@@ -31,9 +31,10 @@ function PlayState:update(dt)
     if scrolling == true then
         -- update timer for pipe spawning
         self.timer = self.timer + dt
+        local newpipet = math.random(1.5,4)
 
         -- spawn a new pipe pair every second and a half
-        if self.timer > 2 then
+        if self.timer > newpipet then
             -- modify the last Y coordinate we placed so pipe gaps aren't too far apart
             -- no higher than 10 pixels below the top edge of the screen,
             -- and no lower than a gap length (90 pixels) from the bottom
