@@ -45,7 +45,7 @@ function ScoreState:render()
         self.medal = bronze
     end
     
-    if self.medal != nil then
+    if self.medal ~= nil then
         love.graphics.draw(self.medal, VIRTUAL_WIDTH /2 -20, VIRTUAL_HEIGHT /2 -20)
     end
     
